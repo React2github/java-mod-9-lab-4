@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row">
+    <div class="col-1 p-3">
+       <span class="badge" [ngClass]="message.sender.isOnline ? 'bg-primary' : 'bg-secondary'">
+        {{message.sender.firstName[0]}}</span>
+    </div>
+    <div class="col-8 p-3 border rounded-5">
+      <span [ngClass]="message.sender.isOnline ? 'fw-bold' : 'fw-light'">Message from Ludovic</span>
+    </div>
+  </div>
+</div>

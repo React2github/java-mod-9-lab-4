@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row">
+    <div class="col-9">
+      <div class="dropdown">
+        <button
+          class="btn btn-primary dropdown-toggle"
+          type="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Conversation
+        </button>
+        <ul class="dropdown-menu">
+          <li *ngFor="let conversation of conversations">
+            <a class="dropdown-item" href="#">
+              <span
+                *ngFor="let user of conversation.users; 
+                                    let isLastConversation = last"
+              >
+                {{ user.firstName }}
+                <span *ngIf="!isLastConversation">, </span>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="float-end">
+        <button class="btn btn-primary" (click)="onNewMessage()">
+          <!-- Replace the [routerLink] directive with a (click) directive -->
+          New Message
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

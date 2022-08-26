@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h3>Contact List</h3>
+    </div>
+  </div>
+
+  <div class="row" *ngFor="let user of users">
+    <div class="col-12 border p-3">
+      <app-contact [user]="user"></app-contact>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 border p-3">
+      <app-contact></app-contact>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-9"></div>
+    <div class="col-3 p-3">
+      <div class="float-end">
+        <button class="btn btn-primary">Start Message</button>
+      </div>
+    </div>
+  </div>
+</div>
