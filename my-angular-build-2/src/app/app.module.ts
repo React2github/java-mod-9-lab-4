@@ -14,6 +14,7 @@ import { SenderMessageComponent } from './sender-message/sender-message.componen
 import { ContactComponent } from './contact/contact.component';
 import { Contacts } from './contacts/contacts.component';
 import { MessageCountComponent } from './message-count/message-count.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { MessageCountComponent } from './message-count/message-count.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

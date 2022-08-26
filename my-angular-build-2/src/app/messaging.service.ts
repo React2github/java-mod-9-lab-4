@@ -6,7 +6,7 @@ import { Subscription } from 'rxjs';
 import { LoggingService } from './logging.service';
 import { Message } from './message';
 
-@Injectable()
+@Injectable({ providedIn: 'root'})
 export class MessagingService {
   private senderMessages: Message[] = [];
   private userMessages: Message[] = [];
